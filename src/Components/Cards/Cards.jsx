@@ -28,7 +28,7 @@ const Cards = ({handleAddSelectButton}) => {
 };
 
 Cards.propTypes = {
-  handleAddSelectButton:PropTypes.func,
+  
 };
 
 export default Cards;

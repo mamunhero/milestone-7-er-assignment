@@ -35,8 +35,7 @@ const Card = ({cardInfo, handleAddSelectButton}) => {
 };
 
 Card.propTypes = {
-  cardInfo: PropTypes.object.isRequired,
-  handleAddSelectButton:PropTypes.func
+  
 };
 
 export default Card;
