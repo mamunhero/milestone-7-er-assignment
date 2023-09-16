@@ -11,8 +11,17 @@
 # Cart
   -Implement a  cart system where users can add courses they want to purchase.
   -Display the selected courses in the cart, showing details and total price.
-# Notifications:
+# Notifications
   -A time limit is given in this course,after that time a message will be given to the student.  
+# useState
+  Course Selection State (selectButton)
+  -This state store all information and when the user  click sellect button then update all information and store setselectButton state.
+  Total Hour State (totalHour):
+  -This state should keep track of the total credit hours of the selected courses.when a user selects course upadate this site and calculating total credit hour. 
+  Remaining Hour State (remainingHour)
+  - This state calculating total hour and when select button click total credit descriseing total hour then show credit hour remaining.
+  Total Price State (totalPrice)
+  -This state should store the total price of the selected courses.When a user selects or deselects a course, update this state by calculating the total price.
 
 
 This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
