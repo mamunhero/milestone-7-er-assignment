@@ -36,7 +36,7 @@ function App() {
       if (count > 20 ){
         return alert("somoy nai")
       }
-      if (sum > 100000) {
+      if (sum > 120000) {
         return alert("taka nai")
       }
       const newSelectButton = [...selectButton, courseName];
