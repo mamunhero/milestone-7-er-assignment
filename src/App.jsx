@@ -4,12 +4,15 @@ import './App.css'
 import Cards from './Components/Cards/Cards'
 import Cart from './Components/Cart/Cart'
 import Header from './Components/Header/Header'
+// react toast
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 function App() {
   // select button usestate
   const [selectButton, setSelectButton] = useState([]);
   // remaining usestate
-  const [remainingHour, setRemainingHour] = useState(1);
+  const [remainingHour, setRemainingHour] = useState(0);
   // total hour usestate
   const [totalHour, setTotalHour] = useState(0);
   // total price
@@ -20,7 +23,7 @@ function App() {
     let count = parseFloat(courseName.credit);
     let sum = parseFloat(courseName.price);
     if (isExist) {
-        return alert("already Exist")
+        return toast.error("Once added, cannot be added again")
     } 
     else {
       selectButton.forEach((item) => {
@@ -34,16 +37,18 @@ function App() {
       });
       // console.log(sum);
       if (count > 20 ){
-        return alert("somoy nai")
+        return toast.error("Your limited time is over time, can't add new time")
+        
       }
       if (sum > 150000) {
-        return alert("taka nai")
+        return toast("Your balance is insufficient")
       }
       const newSelectButton = [...selectButton, courseName];
       setRemainingHour(totalRemainingHour);
       setTotalHour(count);
       setTotalPrice(sum);
       setSelectButton(newSelectButton);
+      
     }
     
   }
@@ -63,6 +68,9 @@ function App() {
           
         </Cart>
       </div>
+      <ToastContainer 
+        position="top-center"
+      />
     </>
   )
 }
